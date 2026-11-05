@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoRent Express - Jasa Rental Mobil Terpercaya</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        carblue: '#1E3A8A',
+                        caraccent: '#2563EB',
+                        cardark: '#0F172A',
+                        carcard: '#1E293B',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.45);
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(37, 99, 235, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-cardark text-slate-100 font-sans antialiased selection:bg-caraccent selection:text-white bg-grid min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-cardark/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-carblue to-caraccent flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-carblue/40">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-wider text-white">AUTORENT<span class="text-caraccent">.ID</span></span>
+                        <span class="block text-[10px] text-slate-400 font-medium tracking-widest uppercase">Sewa Mobil Premium & Economical</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+                    <a href="#home" class="hover:text-caraccent transition-colors">Beranda</a>
+                    <a href="#harga" class="hover:text-caraccent transition-colors">Tipe Mobil & Harga</a>
+                    <a href="#layanan" class="hover:text-caraccent transition-colors">Layanan</a>
+                    <a href="#pembayaran" class="hover:text-caraccent transition-colors">Pembayaran</a>
+                    <a href="#order" class="hover:text-caraccent transition-colors">Form Order</a>
+                </nav>
+
+                <!-- WhatsApp CTA Button Header -->
+                <div class="hidden sm:block">
+                    <a href="https://wa.me/6287768676879?text=Halo%20Admin%20AutoRent,%20saya%20mau%20tanya%20sewa%20mobil" target="_blank" class="px-5 py-2.5 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-sm transition-all duration-300 flex items-center gap-2 shadow-lg shadow-green-500/20 hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>0877 6867 6879</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-carcard border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-caraccent font-medium border-b border-slate-800/50">Beranda</a>
+            <a href="#harga" class="block py-2 text-slate-300 hover:text-caraccent font-medium border-b border-slate-800/50">Tipe Mobil & Harga</a>
+            <a href="#layanan" class="block py-2 text-slate-300 hover:text-caraccent font-medium border-b border-slate-800/50">Layanan</a>
+            <a href="#pembayaran" class="block py-2 text-slate-300 hover:text-caraccent font-medium border-b border-slate-800/50">Pembayaran</a>
+            <a href="#order" class="block py-2 text-slate-300 hover:text-caraccent font-medium border-b border-slate-800/50">Form Order</a>
+            <a href="https://wa.me/6287768676879?text=Halo%20Admin%20AutoRent,%20saya%20mau%20tanya%20sewa%20mobil" target="_blank" class="w-full mt-3 py-3 rounded-xl bg-green-500 text-white font-bold text-center flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Hubungi via WA (0877 6867 6879)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-caraccent/10 border border-caraccent/30 text-caraccent text-xs sm:text-sm font-semibold">
+                        <span class="flex h-2 w-2 rounded-full bg-caraccent animate-ping"></span>
+                        <span>Rental Mobil Cepat, Ambil di Tempat / COD Antar Rumah</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+                        Perjalanan Nyaman & Safe <br class="hidden sm:inline"/>
+                        <span class="bg-gradient-to-r from-caraccent via-blue-400 to-indigo-300 bg-clip-text text-transparent">Armada Bersih, Siap Pakai!</span>
+                    </h1>
+                    <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                        Sewa mobil pilihanmu sekarang! Bisa antar unit langsung ke rumah/bandara (COD) atau ambil di lokasi rental kami. Melayani Lepas Kunci & Plus Driver.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#order" class="px-8 py-4 rounded-xl bg-gradient-to-r from-carblue to-caraccent hover:from-caraccent hover:to-carblue text-white font-bold text-center shadow-lg shadow-caraccent/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-car-side text-xl"></i>
+                            <span>Pesan Mobil Sekarang</span>
+                        </a>
+                        <a href="#harga" class="px-8 py-4 rounded-xl bg-carcard hover:bg-slate-800 text-slate-200 font-semibold text-center border border-slate-700 hover:border-slate-500 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>Lihat Harga Per Tipe</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Quick Badges -->
+                    <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-slate-400 text-xs sm:text-sm">
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-truck-fast text-caraccent text-base sm:text-lg"></i>
+                            <span>Bisa COD / Antar Rumah</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-building text-caraccent text-base sm:text-lg"></i>
+                            <span>Ambil di Tempat Rental</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-wallet text-caraccent text-base sm:text-lg"></i>
+                            <span>E-Wallet & Bank Transfer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Card Visual -->
+                <div class="relative flex justify-center items-center">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-caraccent to-accent rounded-3xl blur-2xl opacity-30"></div>
+                    <div class="relative w-full max-w-md bg-carcard border border-slate-700/60 rounded-3xl p-6 sm:p-8 glow-effect">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs font-bold uppercase tracking-wider text-caraccent">Status Armada Ready</span>
+                            <span class="px-2.5 py-1 rounded-md bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">Fast Response WA</span>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- City Car -->
+                            <div class="p-4 rounded-2xl bg-cardark/80 border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-caraccent text-2xl">
+                                        <i class="fa-solid fa-car-rear"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">City Car (Brio, Agya)</h4>
+                                        <p class="text-xs text-slate-400">Hemat BBM, Lincah</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg bg-green-500/20 text-green-400 text-xs font-bold">Ready</span>
+                            </div>
+
+                            <!-- MPV -->
+                            <div class="p-4 rounded-2xl bg-cardark/80 border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-caraccent text-2xl">
+                                        <i class="fa-solid fa-van-shuttle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">Family MPV (Avanza, Xpander)</h4>
+                                        <p class="text-xs text-slate-400">7 Seater Nyaman</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg bg-caraccent/20 text-caraccent text-xs font-bold">Terlaris</span>
+                            </div>
+
+                            <!-- SUV / Premium -->
+                            <div class="p-4 rounded-2xl bg-cardark/80 border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-caraccent text-2xl">
+                                        <i class="fa-solid fa-car-side"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">SUV & Premium (Innova, Fortuner)</h4>
+                                        <p class="text-xs text-slate-400">Mewah & Gagah</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-lg bg-amber-500/20 text-amber-400 text-xs font-bold">VIP Class</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                            <span><i class="fa-solid fa-clock text-caraccent mr-1"></i> Sewa 12/24 Jam & Bulanan</span>
+                            <span><i class="fa-solid fa-shield-halved text-green-400 mr-1"></i> Asuransi & AC Dingin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan / Mode Pemesanan Section -->
+    <section id="layanan" class="py-16 bg-cardark/50 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Pilihan Layanan Rental</h2>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Fleksibel sesuai kebutuhan perjalanan keluarga, dinas, luar kota, maupun acara spesial.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Opsi 1: COD / Antar Rumah -->
+                <div class="bg-carcard border border-slate-800 rounded-3xl p-8 hover:border-caraccent/50 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-caraccent/10 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-caraccent/20 border border-caraccent/40 flex items-center justify-center text-caraccent text-3xl mb-6">
+                            <i class="fa-solid fa-house-chimney-crack"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">COD / Diantar Sampai Rumah</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Praktis tanpa perlu keluar rumah! Tim kami yang mengantarkan unit mobil langsung ke rumah, stasiun, hotel, atau bandara. Pengecekan unit dilakukan bersama di lokasi pengantaran.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Antar & Jemput unit lokasi customer</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Serah terima kunci cepat & aman</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Syarat dokumen mudah & transparan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Opsi 2: Ambil di Tempat Rental -->
+                <div class="bg-carcard border border-slate-800 rounded-3xl p-8 hover:border-caraccent/50 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full -z-0 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-accent/20 border border-accent/40 flex items-center justify-center text-accent text-3xl mb-6">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Ambil di Tempat Rental</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Datang langsung ke garasi / kantor rental kami untuk memilih dan memeriksa langsung armada mobil yang tersedia. Lokasi strategis dan tempat tunggu yang nyaman.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-6">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Pilih unit favorit langsung di lokasi</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Bebas biaya pengantaran unit</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-green-400"></i>
+                                <span>Proses adm singkat langsung jalan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Harga / Pricing Section (Berdasarkan Tipe Mobil) -->
+    <section id="harga" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-caraccent font-bold text-sm tracking-widest uppercase">Pilihan Armada</span>
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-1">Daftar Harga Berdasarkan Tipe Mobil</h2>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Harga jujur & hemat, unit selalu diservis berkala & AC dingin sejuk!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: City Car -->
+                <div class="bg-carcard border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-600 transition-all duration-300 glow-hover">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">Tipe City Car</span>
+                            <i class="fa-solid fa-car-rear text-3xl text-slate-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-white">Honda Brio / Agya / Ayla</h3>
+                        <p class="text-slate-400 text-xs mt-1">Kapasitas 4-5 Penumpang | Irit Bahan Bakar & Mudah Parkir</p>
+                        
+                        <div class="
